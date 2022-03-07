@@ -1,0 +1,147 @@
+@import '../assets/fonts/Geometria/stylesheet';
+@import '../assets/styles/variables';
+
+.calc {
+  background: linear-gradient(122.76deg, hsla(0, 100%, 82%, 1), hsla(0, 100%, 74%, 1)), hsla(0, 0%, 100%);
+  min-height: 100vh;
+}
+@media (min-width: 576px) {
+    .calc {
+        padding: 0.94rem;
+    }
+}
+.calc__container {
+  max-width: 616px;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 576px) {
+    .calc__container {
+        padding: 1.05rem 0.86rem;
+    }
+}
+.calc__container::before {
+  content: '';
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0.5rem;
+}
+
+.calc__content {
+  background: linear-gradient(155.23deg, hsla(216, 56%, 36%, 1), hsla(216, 62%, 52%, 1) 100%);
+  box-shadow: 0 82px 158px rgba(0, 0, 0, 0.35), 0 24.7px 47.6px rgba(0, 0, 0, 0.22),
+    0 10.26px 19.78px rgba(0, 0, 0, 0.18), 0 3.71px 7.15px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(4px);
+  position: relative;
+  max-width: 576px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 0.2rem;
+}
+@media (min-width: 576px) {
+    .calc__content {
+        border-radius: 0.5rem;
+        min-height: 100%;
+        height: auto;
+        padding: 0.8rem 1rem;
+    }
+}
+.calc__result-list {
+  height: 3.25rem;
+  overflow: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  padding-right: 0;
+  scrollbar-width: thin;
+  scrollbar-color: $fontColor1 hsla(0, 0%, 100%, 0.3);
+  &::-webkit-scrollbar {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $fontColor1;
+  }
+}
+
+.calc__result-item {
+  color: $fontColor1;
+  direction: ltr;
+  font-size: 0.67rem;
+  list-style-type: none;
+  font-family: 'Geometria', sans-serif;
+  font-weight: 500;
+}
+.calc__current-value {
+  height: 3rem;
+  font-size: 1.55rem;
+  padding: 0.77rem 0 0.5rem;
+  color: $fontColor1;
+  text-align: right;
+  font-family: 'Geometria', sans-serif;
+  font-weight: 700;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: $fontColor1 hsla(0, 0%, 100%, 0.3);
+  &::-webkit-scrollbar {
+      background-color: hsla(0, 0%, 100%, 0.3);
+      width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+      background-color: $fontColor1;
+  }
+}
+.calc__action-buttons {
+}
+.calc__action-buttons::before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: $fontColor1;
+  display: block;
+}
+.calc__action-buttons-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.2rem;
+  position: relative;
+  padding: 1rem 0 0;
+  margin: 0;
+}
+@media (min-width: 576px) {
+    .calc__action-buttons-list {
+        grid-gap: 0.56rem 0.45rem;
+    }
+}
+.calc__action-button-wrapper {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 80px;
+}
+.calc__action-button {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  color: $fontColor1;
+  border-radius: 50%;
+  border-color: transparent;
+  font-family: 'Geometria', sans-serif;
+  font-weight: 500;
+}
+.calc__action-button:hover {
+  background-color: hsla(0, 0%, 100%, 0.12);
+}
+.calc__action-button:active {
+  background-color: hsla(0, 0%, 100%);
+  color: $fontColor2;
+}

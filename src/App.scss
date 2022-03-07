@@ -1,0 +1,23 @@
+html {
+  margin: 0;
+  font-size: 36px;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+.app {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+
+}
+.container {
+  margin: 0 auto;
+}
