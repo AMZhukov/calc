@@ -9,6 +9,7 @@
         "prodServer": "cross-env NODE_ENV=production webpack --mode production",
         "prod": "serve -s dist -l 4000",
         "eslint_fix": "eslint ./src/**/*.jsx --fix",
+        "test": "jest --env=jsdom",
     },
     "repository": {
         "type": "git",
@@ -75,6 +76,9 @@
         "webpack-dev-server": "^4.7.4"
     },
     "dependencies": {
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/react": "^12.1.4",
+        "@testing-library/user-event": "^13.5.0",
         "normalize.css": "^8.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
