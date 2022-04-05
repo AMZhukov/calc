@@ -9,7 +9,7 @@ export const CalcResultList: React.FC<CalcResultList> = ({resultList}) => {
         <ul className="calc__result-list" data-testid="resultList">
             {resultList.map((item, index) => {
                 return (
-                    <li className="calc__result-item" key={index}>{item}</li>
+                    <li className="calc__result-item" id={'result-' + index} key={index}>{item}</li>
                 );
             })}
         </ul>
