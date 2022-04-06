@@ -6,22 +6,22 @@ import { BUTTONS_CONTENT } from '../constants/buttonsContent';
 import './Calc.scss';
 
 export const Calc: React.FC = () => {
-  const {resultList, currentValue, symbolHandler} = useCalculator();
+  const { resultList, currentValue, symbolHandler } = useCalculator();
 
   const onClickButton = (event: React.SyntheticEvent<HTMLButtonElement>): void => {
-      const {value} = event.currentTarget;
-      symbolHandler(value);
-  }
+    const { value } = event.currentTarget;
+    symbolHandler(value);
+  };
 
-    useEffect(() => {
-        const onKeypress = (e: React.KeyboardEvent): void => symbolHandler(e.key);
-        // @ts-ignore: disable false overload report
-        document.addEventListener('keyup', onKeypress);
-        return () => {
-            // @ts-ignore: disable false overload report
-            document.removeEventListener('keyup', onKeypress);
-        };
-    });
+  useEffect(() => {
+    const onKeypress = (e: React.KeyboardEvent): void => { return symbolHandler(e.key); };
+    // @ts-ignore: disable false overload report
+    document.addEventListener('keyup', onKeypress);
+    return () => {
+      // @ts-ignore: disable false overload report
+      document.removeEventListener('keyup', onKeypress);
+    };
+  });
 
   return (
     <section className="calc" data-testid="calc">
