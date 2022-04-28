@@ -29,4 +29,4 @@ Need run application `npm run start`
 
 After need run  `npm run e2e` - running e2e tests.
 
-### Andrey Zhukov for Byndyusoft
+### Andrey Zhukov
